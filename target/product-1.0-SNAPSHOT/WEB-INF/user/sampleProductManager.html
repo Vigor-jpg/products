@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> - 项目</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link href="../css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../css/font-awesome.css?v=4.4.0" rel="stylesheet">
+
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/style.css?v=4.1.0" rel="stylesheet">
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInUp">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox">
+                <div class="ibox-title">
+                    <h5>所有项目</h5>
+                    <div class="ibox-tools">
+                        <a href="projects.html" class="btn btn-primary btn-xs">创建新项目</a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div class="row m-b-sm m-t-sm">
+                        <div class="col-md-1">
+                            <button type="button" id="loading-example-btn" class="btn btn-white btn-sm"><i
+                                    class="fa fa-refresh"></i> 刷新
+                            </button>
+                        </div>
+                        <div class="col-md-11">
+                            <div class="input-group">
+                                <input type="text" placeholder="请输入项目名称" class="input-sm form-control"> <span
+                                    class="input-group-btn">
+                                        <button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-list">
+                        <table class="table table-hover">
+                            <tbody>
+                            <tr>
+                                <td class="project-status">
+                                    <span class="label label-primary">进行中</span>
+                                </td>
+                                <td class="project-title">
+                                    <a href="project_detail.html">米莫说｜MiMO Show</a>
+                                    <br/>
+                                    <small>创建于 2014.08.15</small>
+                                </td>
+                                <td class="project-completion">
+                                    <span>当前进度： 28%</span>
+                                </td>
+                                <td class="project-people">
+                                    <span></span>
+                                </td>
+                                <td class="project-actions">
+                                    <a class="btn btn-white btn-sm delete"><i class="fa fa-folder"></i> 删除 </a>
+                                    <a class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> 编辑 </a>
+
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 全局js -->
+<script src="../js/jquery.min.js?v=2.1.4"></script>
+<script src="../js/bootstrap.min.js?v=3.3.6"></script>
+
+
+<!-- 自定义js -->
+<script src="../js/content.js?v=1.0.0"></script>
+
+
+<script>
+    $(document).ready(function () {
+        var table = "<tr>\n" +
+            "                                <td class=\"project-status\">\n" +
+            "                                    <span class=\"label label-primary\">进行中</span>\n" +
+            "                                </td>\n" +
+            "                                <td class=\"project-title\">\n" +
+            "                                    <span>米莫说｜MiMO Show</span>\n" +
+            "                                </td>\n" +
+            "                                <td class=\"project-completion\">\n" +
+            "                                    <span>当前进度： 28%</span>\n" +
+            "                                </td>\n" +
+            "                                <td class=\"project-actions\">\n" +
+            "                                    <a class=\"btn btn-white btn-sm delete\"><i class=\"fa fa-folder\"></i> 删除 </a>\n" +
+            "                                    <a class=\"btn btn-white btn-sm edit\"><i class=\"fa fa-pencil\"></i> 编辑 </a>\n" +
+            "                                </td>\n" +
+            "                            </tr>";
+        $.ajax({
+            data: {},
+            url: "/product/sampleProductManager",
+            type: "POST",
+            dataType: "json",
+            success: function (data) {
+                var obj = JSON.parse(data);
+                $(".project-list table tbody tr").remove();
+                loadNews(obj);
+            }
+        });
+        $(".project-list tbody").on('click', '.delete', function () {
+            if (confirm("是否删除该产品")) {
+                var this_tr = $(this).parent().parent();
+                var product_id = this_tr.find(".project-status span").text();
+                $.ajax({
+                    url: "/product/deleteSampleProduct",
+                    data: {"id": product_id},
+                    dataType: "json",
+                    type: "POST",
+                    success: function (data) {
+                        if (data == "true") {
+                            alert("删除成功！");
+                            this_tr.remove();
+                        } else {
+                            alert("删除失败！");
+                        }
+                    },
+                    error: function () {
+                        alert("网络错误！");
+                    }
+                })
+            }
+        });
+        $(".project-list tbody").on("click", ".edit", function () {
+            alert("!!!");
+            var this_tr = $(this).parent().parent();
+            var product_id = this_tr.find(".project-status span").text();
+            var product_name = this_tr.find(".project-title span").text();
+            window.location.href = "/user/updateHomeProduct?product_id=" + product_id + "&product_name=" + product_name;
+        });
+
+        function loadNews(obj) {
+            for (var i = 0; i < obj.length; i++) {
+                $(".project-list table tbody").append(table);
+                $(".project-list table tbody tr:last").find(".project-status span").text(obj[i]["product_id"]);
+                $(".project-list table tbody tr:last").find(".project-title span").text(obj[i]["product_name"]);
+                $(".project-list table tbody tr:last").find(".project-completion span").text(obj[i]["product_detail"]);
+            }
+        }
+    });
+</script>
+</body>
+</html>

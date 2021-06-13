@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <environments default="mysql">
+        <environment id="mysql">
+            <!--指定事务管理的类型，这里简单使用Java的JDBC的提交和回滚设置-->
+            <transactionManager type="JDBC"/>
+            <!--dataSource 指连接源配置，POOLED是JDBC连接对象的数据源连接池的实现-->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"></property>
+                <property name="url" value="jdbc:mysql://39.99.154.64:3306/nf_products?serverTimezone=CST"></property>
+                <property name="username" value="root"></property>
+                <property name="password" value="fyf19911010"></property>
+            </dataSource>
+        </environment>
+    </environments>
+    <!--查找sql映射文件-->
+    <mappers>
+        <mapper resource="mappers/ProductMapper.xml"/>
+        <mapper resource="mappers/UserMapper.xml"/>
+        <mapper resource="mappers/NewsMapper.xml"/>
+        <mapper resource="mappers/JobMapper.xml"/>
+    </mappers>
+</configuration>
+

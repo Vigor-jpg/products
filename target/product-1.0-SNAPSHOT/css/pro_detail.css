@@ -1,0 +1,254 @@
+@media only screen and (min-width: 100px) {
+    .content {
+        width: 100%;
+        height: auto;
+    }
+
+    .img-intro {
+        width: 100%;
+        height: auto;
+    }
+
+    .i_con {
+        position: relative;
+        width: 1200px;
+        top: -48px;
+        margin: auto;
+        background-color: white;
+    }
+
+    .left_bg {
+        position: absolute;
+        width: 29px;
+        height: 176px;
+        left: -29px;
+        background: url(../img/assert/bg_con.png) no-repeat;
+    }
+
+    .right_bg {
+        position: absolute;
+        width: 29px;
+        height: 176px;
+        right: -29px;
+        background: url(../img/assert/bg_con.png) no-repeat -29px 0px;
+    }
+
+    .inner_t {
+        padding-left: 145px;
+        height: 35px;
+        background-color: #f5f5f5;;
+        color: #30313a;
+    }
+
+    .con_produ {
+        width: 910px;
+        height: auto;
+        margin: auto;
+        padding-top: 40px;
+    }
+
+    .detail_img img {
+        width: 470px;
+        height: 417px;
+        margin-top: 60px;
+        float: left;
+    }
+
+    .detail_con {
+        width: 430px;
+        height: auto;
+        margin-top: 60px;
+        padding-top: 20px;
+        float: left;
+    }
+
+    .detail_con h1 {
+        height: 26px;
+        line-height: 26px;
+        font-size: 26px;
+    }
+
+    .detail_con img {
+        padding-top: 20px;
+        padding-bottom: 10px;
+        width: 79px;
+        height: 33px;
+    }
+
+    .detail_con p {
+        height: 28px;
+        line-height: 28px;
+        font-size: 18px;
+        color: #f5a11a;
+        text-align: left;
+    }
+
+    .detail_con input {
+        width: 169px;
+        height: 41px;
+        line-height: 41px;
+        margin-top: 38px;
+        text-align: center;
+        font-size: 18px;
+        color: white;
+        background-color: #d7232e;
+        cursor: pointer;
+    }
+
+    .shop_con {
+        width: 910px;
+
+        border: 1px solid #cecece;
+    }
+
+    .shop_con_tab {
+        width: 910px;
+        border-bottom: 1px solid #cecece;
+    }
+
+    .shop_con_tab ul {
+        height: 43px;
+        width: 910px;
+    }
+
+    .clr {
+        clear: both;
+    }
+
+    .shop_con_tab li {
+        width: 167px;
+        height: 43px;
+        font-size: 16px;
+        line-height: 43px;
+        padding-left: 20px;
+        text-align: left;
+        float: left;
+        color: grey;
+        cursor: pointer;
+    }
+
+    .shop_con_tab .on {
+        color: white;
+        background: url(../img/product/tab_01.jpg) no-repeat;
+    }
+
+    .shop_info {
+        height: auto;
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+
+    .line_padding {
+        margin-left: 5em;
+    }
+
+    .other_pro {
+        width: 910px;
+        margin-top: 45px;
+        overflow: hidden;
+    }
+
+    .other_pro h1 {
+        height: 32px;
+        padding-left: 30px;
+        font-size: 28px;
+        line-height: 32px;
+        color: #f5a11a;
+    }
+
+    .other_pro_shop {
+        margin-top: 30px;
+    }
+
+    .other_pro_shop li {
+        width: 301px;
+        height: 360px;
+        border: 1px solid #e2e2e2;
+        float: left;
+    }
+
+    .other_pro_shop li img {
+        width: 139px;
+        height: 213px;
+        margin: auto;
+        margin-top: 24px;
+    }
+
+    .other_shop_info {
+        width: 301px;
+        height: 126px;
+        padding: 20px 40px;
+    }
+
+    .other_shop_info h3 {
+        height: 24px;
+        line-height: 24px;
+        font-size: 18px;
+        font-weight: normal;
+        color: #5e5e61;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    .other_shop_info p {
+        text-align: left;
+        font-size: 14px;
+        font-weight: 100;
+    }
+
+    .box_txt {
+        width: 910px;
+        height: 474px;
+        margin-top: 48px;
+        background: url(../img/product/txt_left.png) no-repeat;
+        background-position: left;
+    }
+
+    .txt_list {
+        margin-left: 137px;
+    }
+
+    .txt_list li {
+        width: 50%;
+        height: 32px;
+        margin-top: 34px;
+        float: left;
+    }
+
+    .vm {
+        line-height: 32px;
+
+        vertical-align: middle;
+        float: left;
+    }
+
+    .txt_list img {
+        padding-right: 15px;
+    }
+
+    .txt_list a {
+        font-weight: 300;
+    }
+
+    .pro_box_txt span {
+        display: block;
+        line-height: 30px;
+        height: 30px;
+        width: 80px;
+        text-align: right;
+        margin-right: 10px;
+        float: left;
+        color: rgba(128, 128, 128, 1);
+        font-weight: bold;
+    }
+
+    .shop_info pre {
+        display: block;
+        width: 800px;
+        padding-left: 40px;
+        font-size: 14px;
+        line-height: 30px;
+        text-align: left;
+        color: grey;
+    }
+}

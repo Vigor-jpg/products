@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>上传工作</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="../css/bootstrap.min.css?v=3.3.6" rel="stylesheet"/>
+    <link href="../css/font-awesome.css?v=4.4.0" rel="stylesheet"/>
+    <link href="../css/plugins/iCheck/custom.css" rel="stylesheet"/>
+    <link href="../css/animate.css" rel="stylesheet"/>
+    <link href="../css/style.css?v=4.1.0" rel="stylesheet"/>
+    <script src="../ckeditor/ckeditor.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+        });
+
+        function submite() {
+            if (isNull()) {
+                var formdata = new FormData($("#news_form")[0]);
+                $.ajax({
+                    url: "/job/saveJob",
+                    data: formdata,
+                    dataType: "json",
+                    type: "POST",
+                    processData: false,
+                    contentType: false,
+                    success: function (data) {
+                        if (data == "true") {
+                            alert("上传成功");
+                            window.location.reload();
+                            $(".chosen").each(function () {
+                                $(this).text("");
+                            });
+                        }
+                    },
+                    error: function () {
+                        alert("网络错误！");
+                    }
+                });
+            } else {
+                alert("存在必填项为空");
+            }
+        }
+
+        function isNull() {
+            var i = 0;
+            $(".chosen").each(function () {
+                if ($(this).val() == "") {
+                    i++;
+                    return false;
+                }
+            })
+            if (i != 0) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+<form method="post" id="news_form" style="width: 1080px;margin: auto;margin-top: 30px;" class="form-horizontal"
+      enctype="multipart/form-data">
+    <div class="form-group">
+        <label class="col-sm-2 control-label">工作名称</label>
+        <div class="col-sm-4">
+            <input type="text" name="job_name" class="form-control chosen"/>
+        </div>
+    </div>
+    <div class="hr-line-dashed"></div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">工作地点</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control chosen" name="job_place"/>
+        </div>
+    </div>
+    <div class="hr-line-dashed"></div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">工作类型</label>
+        <div class="col-sm-4">
+            <select class="form-control" name="job_kind">
+                <option>技术类</option>
+                <option>设计类</option>
+                <option>职能类</option>
+                <option>销售类</option>
+            </select>
+        </div>
+    </div>
+    <div class="hr-line-dashed"></div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">工作时间</label>
+        <div class="col-sm-4">
+            <select class="form-control" name="job_time">
+                <option>全职</option>
+                <option>兼职</option>
+            </select>
+        </div>
+    </div>
+    <div class="hr-line-dashed"></div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">工作要求</label>
+        <div class="col-sm-10">
+            <textarea name="job_demand" class="form-control chosen"/></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">工作职责</label>
+        <div class="col-sm-10">
+            <textarea name="job_duty" class="form-control chosen"/></textarea>
+        </div>
+    </div>
+    <div class="hr-line-dashed"></div>
+    <div class="form-group">
+        <div class="col-sm-8 col-sm-offset-2">
+            <button class="btn btn-success" type="button" onsubmit="return false" onclick="submite()">提交</button>
+        </div>
+    </div>
+</form>
+</body>
+</html>

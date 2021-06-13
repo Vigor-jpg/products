@@ -1,0 +1,55 @@
+* {
+    color: black;
+    font-family: "microsoft yahei";
+    outline: 0;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+ol, ul {
+    list-style: none outside none;
+}
+
+p, li {
+    color: grey;
+    text-align: center;
+}
+
+input {
+    display: inline-block;
+    border: 1px solid rgb(221, 235, 242);
+    border-radius: 2px;
+}
+
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+pre {
+    white-space: pre-wrap; /* css3.0 */
+    white-space: -moz-pre-wrap; /* Firefox */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+.clr {
+    clear: both;
+}
+
+.page-container {
+    width: 100%;
+    min-width: 1300px;
+}

@@ -1,0 +1,101 @@
+@media only screen and (min-width: 100px) {
+    .content {
+        width: 100%;
+        height: auto;
+    }
+
+    .img-intro {
+        width: 100%;
+        height: auto;
+    }
+
+    .clr {
+        clear: both;
+    }
+
+    .f1 {
+        margin: auto;
+        margin-top: 40px;
+        width: 1300px;
+        height: auto;
+    }
+
+    .f1_left {
+        width: 1040px;
+        padding-top: 40px;
+        height: auto;
+        border-right: 1px solid rgba(230, 230, 230, 1);
+        float: left;
+    }
+
+    .addr_img {
+        height: 440px;
+        width: 1000px;
+        background-image: url(../img/company/1563799973.68658公司地址截图.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .addr_txt {
+        padding: 50px 0px;
+    }
+
+    .addr_txt p {
+        height: 14px;
+        line-height: 14px;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .f1_right {
+        width: 260px;
+        height: 552px;
+        float: left;
+    }
+
+    .f1_right li {
+        height: 18px;
+        width: 260px;
+        margin-bottom: 30px;
+    }
+
+    .f1_right a {
+        display: block;
+        text-align: left;
+        height: 18px;
+        width: 260px;
+
+    }
+
+    .f1_right small {
+        display: block;
+        height: 2px;
+        width: 20px;
+        margin-top: 5px;
+        margin-left: 36px;
+        margin-right: 30px;
+        background: rgba(230, 230, 230, 1);
+        float: left;
+        transition: color 0.4s, width 0.4s;
+    }
+
+    .f1_right span {
+        text-align: left;
+        font-size: 14px;
+        line-height: 18px;
+        color: rgba(153, 153, 153, 1);
+        transition: color 0.4s, font-size 0.4s;
+    }
+
+    .f1_right a:hover > span {
+        font-size: 18px;
+        color: rgba(0, 107, 214, 1);
+    }
+
+    .f1_right a:hover > small {
+        width: 30px;
+        margin-right: 20px;
+        background-color: rgba(0, 107, 214, 1);
+    }
+}

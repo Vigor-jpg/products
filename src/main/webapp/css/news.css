@@ -1,0 +1,325 @@
+@media only screen and (min-width: 100px) {
+    .content {
+        width: 100%;
+        height: auto;
+    }
+
+    .content_title {
+        margin: 39px 0px;
+    }
+
+    .content_title h2 {
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .new_hot_list {
+        width: 1300px;
+        margin: auto;
+        display: flex;
+    }
+
+    .left_con, .right_con {
+        display: flex;
+        width: 78px;
+        height: 383px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left_con span, .right_con span {
+        font-size: 30px;
+        color: #e60012;
+        cursor: pointer;
+    }
+
+    .left_con .disabled, .right_con .disabled {
+        cursor: default;
+        color: #b6a8a8;
+    }
+
+    .view_news {
+        width: 1144px;
+        height: 500px;
+        overflow: hidden;
+    }
+
+    .view_news ul {
+        position: relative;
+        width: 1000%;
+    }
+
+    .view_news li {
+        background-color: #f9f9f9;
+        position: relative;
+        width: 1144px;
+        float: left;
+    }
+
+    .news_hot_pic {
+        height: 383px;
+        width: 500px;
+        float: left;
+        background-image: url(../img/news/微信图片_20200120171747.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: #f9f9f9;
+    }
+
+    .news_hot_pic a {
+        display: block;
+        cursor: pointer;
+        height: 383px;
+        width: 500px;
+    }
+
+    .news_hot_txt {
+        height: 383px;
+        width: 644px;
+        padding: 45.75px 40px;
+        float: left;
+        text-align: left;
+        background-color: #f9f9f9;
+    }
+
+    .news_time {
+        display: block;
+        width: 66px;
+        background-color: #c70e1c;
+        border-radius: 0px 6px 0px 6px;
+        color: white;
+        font-size: 14px;
+        text-align: center;
+        line-height: 22px;
+    }
+
+    .news_time b {
+        display: block;
+        width: 100%;
+        border-radius: 0px 6px 0px 0px;
+        font-size: 24px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        background-color: #e60012;
+        color: white;
+    }
+
+    .news_hot_txt h5 {
+        margin: 5% 0;
+        height: 60px;
+        line-height: 60px;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .news_hot_txt h5 a {
+        font-size: 22px;
+    }
+
+    .news_hot_txt p {
+        height: 48px;
+        line-height: 24px;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .news_hot_txt h6 {
+        padding-top: 8%;
+        font-weight: normal;
+        line-height: 24px;
+    }
+
+    .news_hot_txt em {
+        border: solid 1px #666;
+        padding: 0px 8px;
+        color: #666;
+    }
+
+    .news_hot_txt span {
+        color: #666;
+        display: block;
+        float: right;
+    }
+
+    .bx_pager {
+        width: 100%;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .pg_item {
+        display: inline-block;
+        padding: 0px 5px;
+    }
+
+    .pg_item a {
+        width: 40px;
+        height: 40px;
+        display: block;
+        padding: 14px;
+        border-radius: 100px;
+    }
+
+    .pg_item .on {
+        border: 1px solid #e60012;
+    }
+
+    .pg_item a:before {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: #e8e8e8;
+        text-align: center;
+        border-radius: 100px;
+    }
+
+    .pg_item .on:before {
+        background-color: #e60012;
+    }
+
+    .tab {
+        width: 1300px;
+        margin: auto;
+        margin-bottom: 30px;
+        border-bottom: solid 1px #e7e7e7;
+        text-align: center;
+    }
+
+    .tab a {
+        display: inline-block;
+        line-height: 70px;
+        height: 70px;
+        font-size: 26px;
+        margin: 0px 25px;
+        color: #333333;
+        opacity: 0.6;
+    }
+
+    .tab a:hover {
+        color: #e60012;
+    }
+
+    .tab .show {
+        opacity: 1;
+        border-bottom: 3px solid #e60012;
+    }
+
+    .box {
+        width: 1300px;
+        height: 630px;
+        margin: auto;
+    }
+
+    .box ul {
+        width: 100%;
+    }
+
+    .box_li {
+        width: 650px;
+        height: 193px;
+        float: left;
+    }
+
+    .box_li a {
+        width: 100%;
+        height: 193px;
+        display: block;
+        float: left;
+        padding: 35px 20px;
+        float: left;
+        border: solid 1px #f1f1f1;
+        cursor: pointer;
+    }
+
+    .box_li a:hover {
+        background-color: #e4e4e4;
+
+    }
+
+    .box_li a:hover > .box_txt h5 {
+        color: #e60012;
+    }
+
+    .box_li a:hover > .box_txt p {
+        color: #e60012;
+    }
+
+    .box_li a:hover > .box_txt span {
+        color: #e60012;
+    }
+
+    .box_time {
+        width: 66px;
+        height: 193px;
+        float: left;
+        margin-right: 20px;
+    }
+
+    .box_pic {
+        width: 185.7px;
+        height: 123px;
+        background-image: url(../img/news/微信图片_20200120171747.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: #f9f9f9;
+        float: left;
+    }
+
+    .box_txt {
+        width: 336.3px;
+        height: 123px;
+        padding-left: 20px;
+        float: left;
+        text-align: left;
+    }
+
+    .box_txt h5 {
+        line-height: 24px;
+        height: 48px;
+        font-size: 16px;
+        text-align: left;
+        margin-bottom: 10px;
+        font-weight: normal;
+    }
+
+    .box_txt p {
+        line-height: 24px;
+        height: 48px;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .pages {
+        width: 1300px;
+        margin: auto;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .pages_li {
+        display: inline-block;
+        margin-right: 5px;
+        width: auto;
+    }
+
+    .pages_li a {
+        padding: 7px 15px;
+        line-height: 24px;
+        display: inline-block;
+        border: solid 1px #edecec;
+        cursor: pointer;
+    }
+
+    .pages_li .active {
+        background-color: #e60012;
+        border-color: #e60012;
+        color: white;
+    }
+}

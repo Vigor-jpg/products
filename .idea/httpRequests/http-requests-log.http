@@ -1,0 +1,500 @@
+POST http://localhost:8080/news/deleteNews
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"news_id":288}
+
+<> 2020-02-13T050307.500.html
+
+###
+
+POST http://localhost:8080/news/deleteNews?page=1&page=1&targt=集团新闻
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"news_id":288}
+
+<> 2020-02-13T045852.500.html
+
+###
+
+POST http://localhost:8080/new/deleteNews?page=1&page=1&targt=集团新闻
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"news_id":288}
+
+<> 2020-02-13T045836.404.html
+
+###
+
+POST http://localhost:8080/product/getTabProduct?page=1&page=1&targt=集团新闻
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt": 有机农药}
+
+<> 2020-02-05T044759.200.txt
+
+###
+
+POST http://localhost:8080/product/getTabProduct?page=1&page=1&targt=集团新闻
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt": 有机农药}
+
+<> 2020-02-05T044758.200.txt
+
+###
+
+POST http://localhost:8080/product/getTabProduct?page=1&page=1&targt=集团新闻
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt": 有机农药}
+
+<> 2020-02-05T044757.200.txt
+
+###
+
+POST http://localhost:8080/product/getTabProduct?page=1&page=1&targt=集团新闻
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt": 有机农药}
+
+<> 2020-02-05T044755.200.txt
+
+###
+
+POST http://localhost:8080/product/getTabProduct?page=1&page=1&targt=集团新闻
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":"有机农药"}
+
+<> 2020-02-05T044731.200.txt
+
+###
+
+GET http://localhost:8080/getnews?page=1&page=1&targt=集团新闻
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":"集团新闻"}
+
+<> 2020-02-04T071224.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":"集团新闻"}
+
+<> 2020-02-04T071128.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":"集团新闻"}
+
+<> 2020-02-04T071126.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":集团新闻}
+
+<> 2020-02-04T071117.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":"集团新闻"}
+
+<> 2020-02-04T071031.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":集团新闻}
+
+<> 2020-02-04T071004.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":集团新闻}
+
+<> 2020-02-04T070946.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":集团新闻}
+
+<> 2020-02-04T052517.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":集团新闻}
+
+<> 2020-02-04T052515.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":"集团新闻"}
+
+<> 2020-02-04T052507.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":集团新闻}
+
+<> 2020-02-04T052442-4.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":集团新闻}
+
+<> 2020-02-04T052442-3.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":集团新闻}
+
+<> 2020-02-04T052442-2.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":集团新闻}
+
+<> 2020-02-04T052442-1.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":集团新闻}
+
+<> 2020-02-04T052442.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":集团新闻}
+
+<> 2020-02-04T052441-4.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":集团新闻}
+
+<> 2020-02-04T052441-3.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":集团新闻}
+
+<> 2020-02-04T052441-2.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":集团新闻}
+
+<> 2020-02-04T052441-1.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":集团新闻}
+
+<> 2020-02-04T052441.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":集团新闻}
+
+<> 2020-02-04T052440-2.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":集团新闻}
+
+<> 2020-02-04T052440-1.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":集团新闻}
+
+<> 2020-02-04T052440.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":集团新闻}
+
+<> 2020-02-04T052432.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":集团新闻}
+
+<> 2020-02-04T042039-1.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":集团新闻}
+
+<> 2020-02-04T042039.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":集团新闻}
+
+<> 2020-02-04T042037.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":集团新闻}
+
+<> 2020-02-04T042036.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":集团新闻}
+
+<> 2020-02-04T042035.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":"集团新闻"}
+
+<> 2020-02-04T041948.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":"集团新闻"}
+
+<> 2020-02-04T041410.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":"集团新闻"}
+
+<> 2020-02-04T041207.200.txt
+
+###
+
+POST http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":"集团新闻"}
+
+<> 2020-02-04T040951.200.txt
+
+###
+
+GET http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":"集团新闻"}
+
+<> 2020-02-04T040632.200.txt
+
+###
+
+GET http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":"集团新闻"}
+
+<> 2020-02-04T040139.200.txt
+
+###
+
+GET http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":"集团新闻"}
+
+<> 2020-02-04T040137.200.txt
+
+###
+
+GET http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":"集团新闻"}
+
+<> 2020-02-04T040028.200.txt
+
+###
+
+GET http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":"集团新闻"}
+
+<> 2020-02-04T035849.200.txt
+
+###
+
+GET http://localhost:8080/getnews?page=1&targt="集团新闻"
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":"集团新闻"}
+
+<> 2020-02-04T035732.200.txt
+
+###
+
+POST http://localhost:8080/getnews
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"page":1,"targt":"集团新闻"}
+
+<> 2020-02-04T035609.500.html
+
+###
+
+POST http://localhost:8080/login
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"user":"冯宇","password":"dmy"}
+
+<> 2019-12-15T014130.200.txt
+
+###
+
+POST http://localhost:8080/login
+Accept: */*
+Content-Type: aplication/json;charset=utf-8
+
+{"user":"老刘","password":"120456"}
+
+<> 2019-12-15T013820.200.txt
+
+###
+

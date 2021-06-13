@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.dao.JobMapper">
+    <resultMap id="JobResultMap" type="com.ssm.domain.Job">
+        <id column="job_id" property="job_id"/>
+        <result column="job_name" property="job_name"/>
+        <result column="job_place" property="job_place"/>
+        <result column="job_kind" property="job_kind"/>
+        <result column="job_time" property="job_time"/>
+        <result column="job_release_time" property="job_release_time"/>
+        <result column="job_demand" property="job_demand"/>
+        <result column="job_duty" property="job_duty"/>
+    </resultMap>
+    <select id="getJobDetails" resultMap="JobResultMap">
+        select * from job
+        <where>
+            <if test='job_place!="全部"'>
+                and job_place=#{job_place}
+            </if>
+            <if test='job_kind!="全部"'>
+                and job_kind=#{job_kind}
+            </if>
+            <if test='job_time!="全部"'>
+                and job_time=#{job_time}
+            </if>
+        </where>
+    </select>
+    <insert id="saveJob">
+        insert into job
+        (job_name,job_place,job_kind,job_time,job_release_time,job_demand,job_duty)
+        values (#{job_name},#{job_place},#{job_kind},#{job_time},#{job_release_time},#{job_demand},#{job_duty});
+    </insert>
+    <select id="getLimitJob" resultMap="JobResultMap">
+        select * from job
+        order by job_id DESC
+        limit #{num};
+    </select>
+    <delete id="deleteJob">
+        delete from job
+        where job_id=#{job_id};
+    </delete>
+    <update id="updateJob">
+        update job set
+        job_name=#{job_name},
+        job_place=#{job_place},
+        job_kind=#{job_kind},
+        job_time=#{job_time},
+        job_demand=#{job_demand},
+        job_duty=#{job_duty}
+        where job_id=#{job_id};
+    </update>
+    <select id="getJob" resultMap="JobResultMap">
+        select * from job
+        where job_id=#{job_id};
+    </select>
+    <select id="getJobPlace" resultType="java.lang.String">
+        select DISTINCT job_place from job;
+    </select>
+</mapper>

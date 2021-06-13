@@ -1,0 +1,123 @@
+@media only screen and (min-width: 100px){
+	.content{
+		width:1300px;
+		margin: auto;
+		height: auto;
+	}
+	.content_title{
+		margin: 39px 0px;
+	}
+	.content_title h2{
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		font-size: 28px;
+		font-weight:bold;
+	}
+	.content_title .cn{
+		font-size: 30px;
+		font-weight: normal;
+	}
+	.content_title .en{
+		font-size: 43px;
+	}
+	.content_num{
+		width: 1300px;
+		height: 166px;
+		margin-bottom:39px;
+	}
+	.content_num_ul li{
+		display: block;
+		float: left;
+		width:260px;
+		height: 166px;
+		padding: 26px;
+		padding-top: 56px;
+		border-left:1px solid #cecece;;
+	}
+	.content_num_ul h2{
+		font-size: 40px;
+		height: 60px;
+		font-weight: bold;
+		text-align: left;
+	}
+	.content_num_ul h3{
+		font-size: 16px;
+		height: 30px;
+		font-weight: 400;
+		height: 552px;
+		text-align: left;
+	}
+	.f1_left{
+		width: 780px;
+		
+		float: left;
+	}
+	.f1_right{
+		width: 520px;
+		padding-left: 260px;
+		height: 552px;
+		background-image:url(../img/company/photo4.jpg) ;
+		background-repeat:no-repeat ;
+		background-position:left ;
+		float: left;
+	}
+	.f1_right li{
+		height: 18px;
+		width: 260px;
+		margin-bottom: 30px;
+	}
+	.f1_right a{
+		display: block;
+		text-align: left;
+		height: 18px;
+		width: 260px;
+		
+	}
+	.f1_right small{
+		display: block;
+		height: 2px;
+		width:20px;
+		margin-top: 5px;
+		margin-left:36px;
+		margin-right:30px;
+		background: rgba(230, 230, 230, 1);
+		float: left;
+		transition: color 0.4s,width 0.4s;
+	}
+	.f1_right span{
+		text-align: left;
+		font-size: 14px;
+		line-height: 18px;
+		color:rgba(153, 153, 153, 1);
+		transition: color 0.4s,font-size 0.4s;
+	}
+	.f1_right a:hover > span{
+		font-size: 18px;
+		color: rgba(0, 107, 214, 1);
+	}
+	.f1_right a:hover > small{
+		width: 30px;
+		margin-right: 20px;
+		background-color: rgba(0, 107, 214, 1);
+	}
+	.content .txt{
+		line-height: 24px;
+		padding: 0px 22px;
+		color: #333333;
+		border-left: 6px solid #e8e8e8;
+		margin-bottom: 39px;
+	}
+	.f2{
+		width: 1300px;
+		margin: auto;
+	}
+	.f2_left{
+		width: 780px;
+		padding-top: 39px;
+		float: left;
+	}
+	.f2 img{
+		width: 520px;
+	}
+}

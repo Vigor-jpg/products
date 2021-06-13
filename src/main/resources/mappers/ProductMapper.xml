@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.dao.ProductMapper">
+    <resultMap id="ProductResultMap" type="com.ssm.domain.Product">
+        <id column="product_id" property="product_id"/>
+        <result column="product_title" property="product_title"/>
+        <result column="product_detail" property="product_detail"/>
+        <result column="product_img_path" property="product_img_path"/>
+        <result column="product_url" property="product_url"/>
+        <result column="product_target" property="product_target"/>
+        <result column="product_descrip" property="product_descrip"/>
+        <result column="product_size" property="product_size"/>
+        <result column="product_other" property="product_other"/>
+    </resultMap>
+    <resultMap id="SampleProductMap" type="com.ssm.domain.SampleProduct">
+        <id column="product_id" property="product_id"/>
+        <result column="product_title" property="product_title"/>
+        <result column="product_detail" property="product_detail"/>
+        <result column="product_img_path" property="product_img_path"/>
+        <result column="product_url" property="product_url"/>
+        <result column="product_target" property="product_target"/>
+    </resultMap>
+    <select id="getMaxSize" resultType="java.lang.Integer">
+        select count(*) from product
+        where product_target=#{target};
+    </select>
+    <select id="getTabProduct" resultMap="SampleProductMap">
+        select * from  product
+        where product_target=#{target}
+        ORDER BY product_id DESC
+        limit #{minPage},9;
+    </select>
+    <select id="getTopProduct" resultMap="SampleProductMap">
+        select * from  product
+        ORDER BY product_id DESC
+        limit #{num};
+    </select>
+    <select id="getHomeProduct" resultMap="SampleProductMap">
+        select * from  home_product
+        ORDER BY product_id DESC
+        limit #{num};
+    </select>
+    <insert id="saveProduct">
+        insert into product
+        (product_name,product_detail,product_img_path,product_url,product_target,product_size,product_descrip,product_other)
+         values(#{product_name},#{product_detail},#{product_img_path},#{product_url},#{product_target},#{product_size},#{product_descrip},#{product_other});
+    </insert>
+    <select id="getProductType" resultType="java.lang.String">
+        select DISTINCT product_target from product;
+    </select>
+    <select id="getProduct" resultMap="ProductResultMap">
+        select * from product
+        where product_id=#{product_id};
+    </select>
+    <select id="getSampleImgPath" resultType="java.lang.String">
+        select  product_img_path from home_product
+        where product_id=#{product_id};
+    </select>
+    <delete id="deleteProduct">
+        delete from product
+        where product_id=#{product_id};
+    </delete>
+    <delete id="deleteSampleProduct">
+        delete from home_product
+        where product_id=#{product_id};
+    </delete>
+    <update id="updateProduct" parameterType="com.ssm.domain.Product">
+        update product set
+        product_name=#{product_name},
+        product_detail=#{product_detail},
+        product_img_path=#{product_img_path},
+        product_target=#{product_target},
+        product_descrip=#{product_descrip},
+        product_size=#{product_size},
+        product_other=#{product_other}
+        where product_id=#{product_id};
+        update home_product set
+        product_name=#{product_name}
+        where product_id=#{product_id};
+    </update>
+    <update id="updateHomeProduct" parameterType="com.ssm.domain.SampleProduct">
+        update home_product set
+        product_detail=#{product_detail},
+        product_img_path=#{product_img_path}
+        where product_id=#{product_id};
+    </update>
+    <insert id="addHomeProduct" parameterType="com.ssm.domain.SampleProduct">
+        insert into home_product
+        values (#{product_id},#{product_name},#{product_detail},#{product_img_path},#{product_url});
+    </insert>
+</mapper>
